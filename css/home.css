@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap');
+@import 'general.css';
+
+body {
+  font-family: 'Righteous', cursive;
+  color: #fff4e6;
+}
+
+header {
+  height: 100vh;
+  position: relative;
+
+  background-image: linear-gradient(
+      rgba(20, 20, 20, 0.312),
+      rgba(20, 20, 20, 0.393)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  /* color: #fff; */
+}
+
+.inner {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.inner h1 {
+  font-size: 8.4rem;
+  font-family: 'Pacifico', cursive;
+}
+
+.inner h2 {
+  font-size: 4.8rem;
+}
+
+.inner h3 {
+  font-size: 2.4rem;
+  color: #ffec99;
+}
+
+.nav-container {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+  margin-top: 2.4rem;
+}
+
+.btn-nav {
+  padding: 1.3em 3em;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff4e6;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-nav:hover {
+  background-color: #ffa94d;
+  box-shadow: 0px 15px 20px #f08c005b;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.btn-nav:active {
+  transform: translateY(-1px);
+}

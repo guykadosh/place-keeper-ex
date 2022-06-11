@@ -1,0 +1,131 @@
+@import 'general.css';
+@import 'nav.css';
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
+
+h1 {
+  font-size: 4.8rem;
+  text-align: center;
+}
+
+.map-container {
+  display: flex;
+  /* width: 80%; */
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.322);
+  /* border-radius: 9px; */
+}
+
+.places-container {
+  background-color: #f8f9fa;
+  width: 30rem;
+  height: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.4rem;
+}
+
+.places {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.places-container a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #555;
+}
+
+#map {
+  width: 60rem;
+  height: 60rem;
+}
+
+.place {
+  width: 100%;
+  height: 5rem;
+  background-color: #ced4da;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.place button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #495057;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #f1f3f5;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 40%;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2.6rem 0.6rem;
+  gap: 1.6rem;
+  background-color: #ced4da;
+  transition: transform 0.5s;
+  box-shadow: 4px 5px 19px 0px rgba(0, 0, 0, 0.29);
+  border-radius: 9px;
+  transform: translateY(-110%);
+  text-align: center;
+}
+
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.open {
+  transform: translate(0%);
+}
+
+form input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 13px;
+}
+
+form button {
+  font-family: 'Rubik', sans-serif;
+  width: 10rem;
+  background: #555;
+  font-weight: bold;
+  color: #fff;
+  border: 0 none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 1rem 0.5rem;
+  margin: 1.6rem 0.5rem;
+}
+
+form button:hover,
+form button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #333;
+}

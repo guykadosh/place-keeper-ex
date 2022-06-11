@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/user.css" />
+
+    <script defer src="js/services/storageService.js"></script>
+    <script defer src="js/services/userService.js"></script>
+    <script defer src="js/services/utilService.js"></script>
+    <script defer src="js/userController.js"></script>
+    <title>User Settings</title>
+  </head>
+  <body class="body" onload="initUser()">
+    <datalist id="genderlist">
+      <option value="Male" label="Male" />
+      <option value="Female" label="Female" />
+    </datalist>
+    <!-- Page -->
+    <div class="page">
+      <!-- Header -->
+      <header>
+        <nav class="nav-container">
+          <a href="index.html" class="btn btn-nav">Homepage</a>
+          <a href="map.html" class="btn-nav">My Map</a>
+          <a class="btn-nav">Comming soon</a>
+        </nav>
+        <h1>My User Settings</h1>
+      </header>
+      <!-- Main content -->
+      <main>
+        <section class="section-form">
+          <form onsubmit="onSetUser(event)">
+            <h2 class="fs-title">Your settings</h2>
+            <h3 class="fs-subtitle">General</h3>
+            <div class="input">
+              <label for="email">E-mail</label>
+              <input type="email" name="email" required />
+            </div>
+            <div class="input">
+              <label for="gender">Gender</label>
+              <input type="email" id="gender" name="gender" list="genderlist" />
+            </div>
+            <div class="input">
+              <label for="age">Age:</label>
+              <input
+                type="range"
+                id="age"
+                name="age"
+                step="1"
+                min="18"
+                max="120"
+                value="26"
+                onchange="this.title = this.value"
+                required
+              />
+            </div>
+            <h3 class="fs-subtitle">Colors</h3>
+            <div class="input">
+              <label for="bgc-color">Set Background Color</label>
+              <input
+                type="color"
+                id="bgc-color"
+                name="bgc-color"
+                form="frmRegister"
+                value="#ff0000"
+                required
+              />
+            </div>
+            <div class="input">
+              <label for="color">Set Text Color</label>
+              <input
+                type="color"
+                id="text-color"
+                name="text-color"
+                value="#ff0000"
+                required
+              />
+            </div>
+            <h3 class="fs-subtitle">Birthday</h3>
+            <div class="input">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" required />
+            </div>
+            <div class="input">
+              <label for="bt">Birth Time</label>
+
+              <input
+                type="time"
+                id="bt"
+                name="bt"
+                min="00:00"
+                max="23:59"
+                required
+              />
+            </div>
+            <button class="action-button">Set</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

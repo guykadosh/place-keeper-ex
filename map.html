@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Places</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/map.css" />
+
+    <script defer src="js/services/storageService.js"></script>
+    <script defer src="js/services/userService.js"></script>
+    <script defer src="js/services/utilService.js"></script>
+    <script defer src="js/services/placeService.js"></script>
+    <script defer src="js/userController.js"></script>
+    <script defer src="js/placeController.js"></script>
+  </head>
+  <body onload="initPlace()">
+    <header>
+      <nav class="nav-container">
+        <a href="index.html" class="btn-nav">Homepage</a>
+        <a href="user-settings.html" class="btn btn-nav">My Details</a>
+        <a class="btn-nav">Comming soon</a>
+      </nav>
+      <h1>My Places</h1>
+    </header>
+    <main>
+      <div class="map-container">
+        <div id="map"></div>
+        <div class="places-container">
+          <div class="places">
+            <div class="place">
+              <span class="place-name">Aloha Aloha</span>
+              <button onclick="removePlace('id')">X</button>
+            </div>
+          </div>
+          <div>
+            <a
+              href="#"
+              onclick="downloadCSV(this)"
+              download="exported-data.csv"
+            >
+              <i class="fas fa-file-csv csv-icon"></i>
+              Download Places
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal">
+      <h2>Add new place</h2>
+      <form class="form-modal" onsubmit="onAddPlace(event)">
+        <input
+          class="input"
+          type="text"
+          name="place-name"
+          placeholder="Enter place name"
+        />
+        <button class="btn">Add</button>
+      </form>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/402c8e958b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkGvOiUSEqM5BMxvFVJq2kTDQ-gWzGvTE&libraries=places&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>
