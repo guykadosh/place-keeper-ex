@@ -80,3 +80,12 @@ form .action-button:hover,
 form .action-button:focus {
   box-shadow: 0 0 0 2px white, 0 0 0 3px #27ae60;
 }
+
+.input.age {
+  position: relative;
+}
+.curr-age {
+  position: absolute;
+  right: -30px;
+  top: 7px;
+}

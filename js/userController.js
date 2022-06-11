@@ -49,3 +49,9 @@ function onSetUser(ev) {
   setUser(user)
   renderUserColors()
 }
+
+function showCurrAge(elInput) {
+  const currAge = elInput.value
+
+  document.querySelector('.curr-age').innerText = currAge
+}

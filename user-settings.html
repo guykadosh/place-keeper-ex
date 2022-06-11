@@ -36,13 +36,13 @@
             <h3 class="fs-subtitle">General</h3>
             <div class="input">
               <label for="email">E-mail</label>
-              <input type="email" name="email" required />
+              <input type="email" name="email" />
             </div>
             <div class="input">
               <label for="gender">Gender</label>
               <input type="text" id="gender" name="gender" list="genderlist" />
             </div>
-            <div class="input">
+            <div class="input age">
               <label for="age">Age:</label>
               <input
                 type="range"
@@ -52,9 +52,10 @@
                 min="18"
                 max="120"
                 value="26"
-                onchange="this.title = this.value"
+                onchange="this.title = this.value;showCurrAge(this)"
                 required
               />
+              <span class="curr-age">26</span>
             </div>
             <h3 class="fs-subtitle">Colors</h3>
             <div class="input">
@@ -86,14 +87,7 @@
             <div class="input">
               <label for="bt">Birth Time</label>
 
-              <input
-                type="time"
-                id="bt"
-                name="bt"
-                min="00:00"
-                max="23:59"
-                required
-              />
+              <input type="time" id="bt" name="bt" min="00:00" max="23:59" />
             </div>
             <button class="action-button">Set</button>
           </form>
